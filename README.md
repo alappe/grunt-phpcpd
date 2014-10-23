@@ -65,7 +65,7 @@ Set a path and filename here to write to a file, otherwise it will write to stdo
 Type: `String`
 Default: `false`
 
-Exclude <dir> from code analysis.
+Exclude `<dir>` from code analysis.  Also supports `Array` syntax for excluding multiple directories.
 
 #### minLines
 Type: `Number`
