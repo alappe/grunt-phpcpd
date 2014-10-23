@@ -9,6 +9,8 @@ Licensed under the BSD license.
 path = require 'path'
 exec = (require 'child_process').exec
 
+typeIsArray = Array.isArray || ( value ) -> return {}.toString.call( value ) is '[object Array]'
+
 exports.init = (grunt) ->
 
   exports = config = {}
@@ -30,7 +32,13 @@ exports.init = (grunt) ->
     cmd += " --log-pmd #{config.reportFile}" if config.reportFile
     cmd += " --min-lines #{config.minLines}"
     cmd += " --min-tokens #{config.minTokens}"
-    cmd += " --exclude #{config.exclude}" if config.exclude
+
+    if typeIsArray config.exclude
+      cmd += " --exclude #{excl}" for excl in config.exclude
+    else if config.exclude
+      cmd += " --exclude #{config.exclude}"
+
+
     cmd += " --names \"#{config.names}\"" if config.names
     cmd += " --quiet" if config.quiet
     cmd += " --verbose" if config.verbose
