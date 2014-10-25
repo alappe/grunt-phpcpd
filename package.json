@@ -1,6 +1,6 @@
 {
   "name": "grunt-phpcpd",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Grunt plugin for running PHP Copy/Paste Detector (PHPCPD).",
   "main": "tasks/phpcpd.js",
   "scripts": {
