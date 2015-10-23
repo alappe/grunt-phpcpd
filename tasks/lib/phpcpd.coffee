@@ -20,6 +20,7 @@ exports.init = (grunt) ->
     bin: 'phpcpd'
     minLines: 5
     minTokens: 70
+    fuzzy: false
     exclude: false
     names: '*.php'
     quiet: true
@@ -33,6 +34,7 @@ exports.init = (grunt) ->
     cmd += " --log-pmd #{config.reportFile}" if config.reportFile
     cmd += " --min-lines #{config.minLines}"
     cmd += " --min-tokens #{config.minTokens}"
+    cmd += " --fuzzy" if config.fuzzy
     if typeIsArray config.exclude
       cmd += " --exclude #{excl}" for excl in config.exclude
     else if config.exclude

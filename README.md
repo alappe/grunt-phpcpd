@@ -79,6 +79,12 @@ Default: `70`
 
 Minimum number of identical tokens.
 
+#### fuzzy
+Type: `Boolean`
+Default: `false`
+
+Use fuzz variable names.
+
 #### names
 Type: `String`
 Default: `'*.php'`
