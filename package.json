@@ -1,6 +1,6 @@
 {
   "name": "grunt-phpcpd",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Grunt plugin for running PHP Copy/Paste Detector (PHPCPD).",
   "main": "tasks/phpcpd.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": {
     "name": "Andreas Lappe"
   },
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/alappe/grunt-phpcpd/issues"
   },
